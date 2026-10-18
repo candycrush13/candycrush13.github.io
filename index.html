@@ -343,7 +343,7 @@ footer{text-shadow:0 1px 6px #000}
 <script>
 /* firefly cursor: glowing firefly with a sparkle trail, blooms into a flower on links, bursts on click */
 (function(){
-  if(!matchMedia('(hover:hover) and (pointer:fine)').matches)return;
+  if(!matchMedia('(any-hover:hover) and (any-pointer:fine)').matches)return;
   var calm=matchMedia('(prefers-reduced-motion: reduce)').matches;
   var cv=document.createElement('canvas');cv.className='ccv';document.body.appendChild(cv);
   var c=cv.getContext('2d'),dpr=Math.min(devicePixelRatio||1,2);
