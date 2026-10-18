@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>candycrush13</title>
+<style>
+:root{--bg:#0b0f14;--card:#111822;--text:#d6e2f0;--muted:#7d8da1;--accent:#1793d1;--accent2:#39d98a;--line:#1e2a38}
+@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#f4f7fb;--card:#fff;--text:#14202e;--muted:#5a6b7e;--accent:#0b76b0;--accent2:#12905a;--line:#d8e1ec}}
+:root[data-theme="light"]{--bg:#f4f7fb;--card:#fff;--text:#14202e;--muted:#5a6b7e;--accent:#0b76b0;--accent2:#12905a;--line:#d8e1ec}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:ui-monospace,"JetBrains Mono","Fira Code",Menlo,Consolas,monospace;line-height:1.6}
+.wrap{max-width:860px;margin:0 auto;padding:24px 20px 60px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:12px 0;border-bottom:1px solid var(--line);flex-wrap:wrap;gap:10px}
+nav .logo{color:var(--accent);font-weight:700}
+nav a{color:var(--muted);text-decoration:none;margin-left:16px}
+nav a:hover{color:var(--accent2)}
+.hero{padding:56px 0 32px}
+.prompt{color:var(--accent2)}
+h1{font-size:clamp(2rem,6vw,3.2rem);margin:8px 0}
+h1 span{color:var(--accent)}
+.sub{color:var(--muted);max-width:560px}
+.cursor{display:inline-block;width:10px;height:1.1em;background:var(--accent2);vertical-align:-2px;animation:b 1s steps(1) infinite}
+@keyframes b{50%{opacity:0}}
+.btns{margin-top:22px;display:flex;gap:12px;flex-wrap:wrap}
+.btn{padding:10px 18px;border:1px solid var(--accent);color:var(--accent);text-decoration:none;border-radius:6px}
+.btn.fill{background:var(--accent);color:#fff}
+.btn:hover{border-color:var(--accent2)}
+h2{font-size:1.2rem;margin:48px 0 16px;color:var(--accent2)}
+h2::before{content:"$ ";color:var(--muted)}
+.term{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:16px;overflow-x:auto}
+.term p{margin:4px 0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:8px;padding:18px;text-decoration:none;color:inherit;display:block}
+.card:hover{border-color:var(--accent)}
+.card h3{margin:0 0 6px;color:var(--accent)}
+.card p{margin:0;color:var(--muted);font-size:.92rem}
+.tags{margin-top:10px;font-size:.78rem;color:var(--accent2)}
+.skills{display:flex;flex-wrap:wrap;gap:10px}
+.skills span{border:1px solid var(--line);background:var(--card);padding:6px 12px;border-radius:999px;font-size:.88rem}
+footer{margin-top:60px;padding-top:18px;border-top:1px solid var(--line);color:var(--muted);font-size:.85rem;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+button.theme{background:none;border:1px solid var(--line);color:var(--muted);border-radius:6px;padding:4px 10px;font:inherit;cursor:pointer}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav>
+    <span class="logo">candycrush13@arch:~</span>
+    <div><a href="#about">about</a><a href="#projects">projects</a><a href="#skills">skills</a><a href="#contact">contact</a>
+    <button class="theme" id="t" aria-label="Toggle theme">theme</button></div>
+  </nav>
+
+  <section class="hero">
+    <div class="prompt">$ whoami</div>
+    <h1>candy<span>crush13</span><span class="cursor"></span></h1>
+    <p class="sub">I run Arch Linux with GNOME, and I build tools and scripts for Linux and Windows. Everything is open on GitHub.</p>
+    <div class="btns">
+      <a class="btn fill" href="https://github.com/candycrush13" target="_blank" rel="noopener">GitHub profile</a>
+      <a class="btn" href="#projects">See projects</a>
+    </div>
+  </section>
+
+  <section id="about">
+    <h2>cat about.txt</h2>
+    <div class="term">
+      <p><span class="prompt">os</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : Arch Linux (btw)</p>
+      <p><span class="prompt">desktop</span> : GNOME</p>
+      <p><span class="prompt">shell</span>&nbsp;&nbsp; : zsh</p>
+      <p><span class="prompt">focus</span>&nbsp;&nbsp; : useful scripts, desktop mods, small tools</p>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2>ls projects/</h2>
+    <div class="grid">
+      <a class="card" href="https://github.com/candycrush13/quest-runner" target="_blank" rel="noopener">
+        <h3>quest-runner</h3>
+        <p>Launches a game for real, waits out a timed quest, then closes it and sends a desktop notification. Ships with an Arch PKGBUILD.</p>
+        <div class="tags">bash &middot; arch &middot; steam</div>
+      </a>
+      <a class="card" href="https://github.com/candycrush13/gnome-chaos" target="_blank" rel="noopener">
+        <h3>gnome-chaos</h3>
+        <p>A wild GNOME desktop modification project with themes and tweaks.</p>
+        <div class="tags">gnome &middot; linux &middot; customization</div>
+      </a>
+      <a class="card" href="https://github.com/candycrush13?tab=repositories" target="_blank" rel="noopener">
+        <h3>more on GitHub</h3>
+        <p>New repos for Linux and Windows get added over time.</p>
+        <div class="tags">open source</div>
+      </a>
+    </div>
+  </section>
+
+  <section id="skills">
+    <h2>ls skills/</h2>
+    <div class="skills"><span>Arch Linux</span><span>GNOME</span><span>zsh / bash</span><span>Git &amp; GitHub</span><span>Linux tweaking</span></div>
+  </section>
+
+  <section id="contact">
+    <h2>contact --me</h2>
+    <div class="term">
+      <p>Find me and my code on <a href="https://github.com/candycrush13" target="_blank" rel="noopener" style="color:var(--accent)">github.com/candycrush13</a></p>
+    </div>
+  </section>
+
+  <footer>
+    <span>&copy; <span id="y"></span> candycrush13</span>
+    <span>made on Arch, btw</span>
+  </footer>
+</div>
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+(function(){
+  var r=document.documentElement,b=document.getElementById('t');
+  try{var s=localStorage.getItem('theme');if(s)r.setAttribute('data-theme',s);}catch(e){}
+  b.onclick=function(){
+    var dark=r.getAttribute('data-theme')?r.getAttribute('data-theme')==='dark':!matchMedia('(prefers-color-scheme: light)').matches;
+    var n=dark?'light':'dark';r.setAttribute('data-theme',n);
+    try{localStorage.setItem('theme',n);}catch(e){}
+  };
+})();
+</script>
+</body>
+</html>
